@@ -1,0 +1,133 @@
+.sidebar {
+  width: 285px;
+  height: 100vh;
+  min-height: 100dvh;
+  background: #ffffff;
+  padding: 38px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eeeeee;
+  position: relative;
+}
+
+.sidebar-brand h1 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 0.98;
+  color: #4e0808;
+  font-weight: 900;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.brand-subtitle {
+  margin: 18px 0 58px;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  color: #8f8383;
+  font-weight: 800;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar-link {
+  height: 43px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-radius: 16px;
+  color: #3d3d3d;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar-link.active {
+  background: #fff0f0;
+  color: #a10b0b;
+  font-weight: 800;
+}
+
+.sidebar-link:hover {
+  background: #fff2f2;
+  color: #ba1019;
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.sos-button {
+  width: 220px;
+  height: 56px;
+  border: none;
+  border-radius: 9px;
+  background: #c9141e;
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(201, 20, 30, 0.25);
+}
+
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 235px;
+  }
+}
+
+@media (max-width: 850px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    height: 100dvh;
+    width: 300px;
+    max-width: 86vw;
+    min-height: unset;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    padding: 38px 28px 80px;
+    transform: translateX(-110%);
+    transition: transform 0.25s ease;
+    z-index: 1050;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    border-right: none;
+    pointer-events: auto;
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+  }
+
+  .sos-button {
+    width: 220px;
+  }
+}

@@ -1,0 +1,140 @@
+.topbar {
+  height: 66px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 36px;
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  width: 205px;
+  height: 34px;
+  border-radius: 999px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  color: #9a9a9a;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 11px;
+  font-family: inherit;
+  color: #333;
+}
+
+.search-box input::placeholder {
+  color: #8f8f8f;
+  font-weight: 600;
+}
+
+.filter-select {
+  height: 34px;
+  border-radius: 999px;
+  border: none;
+  background: #f3f3f3;
+  padding: 0 14px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #5a5a5a;
+  font-family: inherit;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.notification-btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #4b4b4b;
+  padding: 0;
+}
+
+.notification-btn span {
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #c90f1b;
+}
+
+.feed-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #f5c18a;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 900;
+  color: #4d2b15;
+}
+
+.feed-avatar {
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.feed-avatar:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 560px) {
+  .topbar {
+    padding: 0 18px;
+  }
+
+  .search-box {
+    width: 170px;
+  }
+}
+
+.mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #4e0808;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mobile-menu-toggle:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 850px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .filter-select {
+    display: none;
+  }
+}
